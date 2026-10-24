@@ -7,8 +7,17 @@ Multi-agent debate council. Deterministic execution loop. Real-time observabilit
 
 ## ⚠️ PAPER MODE ONLY — Educational Simulation
 
-This repository contains the **paper trading simulation layer only**.
-No real trades execute. No real capital is at risk.
+**Public snapshot status — reviewed 25 October 2026**
+
+This repository is an incomplete research snapshot last committed on 16 May
+2026. It is not the current local Sentinuity runtime or a verified runnable
+release. `core/schema.py`, `requirements.txt`, `.env.example`, and several
+referenced services are absent.
+
+The intended scope is paper simulation. However, the published engine contains
+optional live-trading imports and conditional buy/sell paths. The presence of a
+paper launcher or packaging script does not establish that this checkout is
+technically locked to paper mode. Do not connect funded wallets or credentials.
 Read `DISCLAIMER.md` before proceeding.
 
 **Not financial advice. No AFSL held.**
@@ -25,30 +34,26 @@ Sentinuity is a research instrument — an autonomous AI organism that:
 - Learns from every closed position via Polaris doctrine updates
 - Self-heals when services fail via the system guardian
 
-The public release is locked to paper trading. The organism debates, signals, and
-tracks simulated PnL — but never touches real capital.
+These describe the intended architecture. The complete pipeline and its
+behaviour cannot be reproduced from this snapshot alone.
 
 ---
 
-## Quick Start
+## Running this snapshot
 
-```bat
-:: 1. Install dependencies
-pip install -r requirements.txt
+A supported quick start is not available: the dependency manifest, environment
+template, schema module and referenced services must first be supplied and
+reviewed as a complete paper-only release. No profitability or live-readiness
+claim is made.
 
-:: 2. Copy environment template
-copy .env.example .env
+## October repair status
 
-:: 3. Run prelaunch check
-python launch\prelaunch.py
-
-:: 4. Launch
-Launch_Sentinuity.bat
-```
-
-Dashboard available at: `http://localhost:8501`
-
----
+A separate local repair package dated 24 October addresses an entry-transaction
+self-lock, adds exit timing measurements, and restores a shadow-tracker launch.
+Those changes and their dependencies are **not included in this public snapshot**.
+Installation checks were reported as passing on the local machine on 25 October;
+post-repair runtime results and profitability remain unverified here. Installation
+checks are not evidence of improved PnL.
 
 ## Architecture
 
@@ -94,7 +99,7 @@ The organism improves through collective intelligence.
 - Educational simulation only
 - Not financial advice
 - No AFSL held
-- Paper trading only — no real execution
+- Intended for paper research; this snapshot is not verified as locked against real execution
 - See `DISCLAIMER.md`
 
 ---
